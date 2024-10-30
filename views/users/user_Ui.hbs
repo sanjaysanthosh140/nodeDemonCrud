@@ -1,0 +1,66 @@
+<section>
+<link rel="stylesheet" href="/stylesheets/style.css">
+  <header>
+    <div class="logo">sanjuXcode</div>
+    <ul class="menu">
+      <li>New</li>
+      <li>abous</li>
+      <a href="/admin/add"  style="text-decoration: none; color:aliceblue;"><li>Upload</li></a>
+    </ul>
+    {{!-- <div class="search"> --}}
+      {{!-- <svg --}}
+        {{!-- aria-hidden="true" --}}
+        {{!-- xmlns="http://www.w3.org/2000/svg" --}}
+        {{!-- fill="none" --}}
+        {{!-- viewBox="0 0 20 20" --}}
+      {{!-- > --}}
+        {{!-- <path --}}
+          {{!-- stroke="currentColor" --}}
+          {{!-- stroke-linecap="round" --}}
+          {{!-- stroke-linejoin="round" --}}
+          {{!-- stroke-width="2" --}}
+          {{!-- d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" --}}
+        {{!-- /> --}}
+      {{!-- </svg> --}}
+    {{!-- </div> --}}
+  </header>
+
+  <!-- list Items -->
+  <div class="slider">
+    <div class="list">
+      {{#each products}}
+        <div class="item active">
+          <img src="/Beimg/{{this._id}}.jpg" />
+          <div class="content">
+            <p>{{this.name}}</p>
+            <h2>{{this.price}}</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore,
+              neque? Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Ipsum, ex.
+            </p>
+          </div>
+        </div>
+
+      {{/each}}
+    </div>
+
+    <div class="arrows">
+      <button id="prev"><</button>
+      <button id="next">></button>
+    </div>
+
+    {{! thum nail }}
+    <div class="thumbnail">
+      {{#each products}}
+        <div class="item active">
+          <img src="/Beimg/{{this._id}}.jpg" />
+          <div class="content">
+            <h6>{{this.price}}</h6>
+          </div>
+        </div>
+      {{/each}}
+    </div>
+  </div>
+
+</section>
